@@ -3,7 +3,6 @@ $(document).ready(function() {
   let textField = $(".new-tweet").find("textarea[name='text']");
   // When the text area receives any input.
   $(textField).on("input", function() {
-    console.log("Changed.");
     // Sets total typed characters.
     let totalCharsTyped = $(this).val().length;
     // Sets remaining characters.
