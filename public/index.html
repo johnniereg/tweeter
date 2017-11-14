@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -31,6 +32,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Compose tweet form -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
@@ -39,16 +41,24 @@
           <span class="counter">140</span>
         </form>
       </section>
+
+      <!-- Published tweets -->
       <section id="tweets">
-        <article>
+        <article class="tweet">
           <header>
-
+            <img class="avatar" src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png">
+            <div class="name">Bill Fields</div>
+            <div class="handle">@MrFields</div>
           </header>
+          <section>
+            <div>Little tweet here.</div>
+          </section>
           <footer>
-
+            <div>10 days ago</div>
           </footer>
         </article>
       </section>
+
       <p>Neutra kale chips retro affogato taiyaki beard, normcore before they sold out plaid mumblecore gentrify narwhal YOLO hashtag. Iceland next level before they sold out affogato authentic. Viral dreamcatcher everyday carry migas asymmetrical woke. Neutra fashion axe distillery, typewriter 3 wolf moon humblebrag chillwave shaman vinyl wolf occupy. Retro mixtape pok pok semiotics, pork belly meditation poke. Squid kogi tumblr, semiotics tote bag kitsch hella iPhone godard vice tilde chia. Jean shorts church-key vegan direct trade, ethical readymade tbh hashtag sartorial tumeric banjo 8-bit. Church-key gluten-free godard pinterest heirloom craft beer cred before they sold out mumblecore quinoa authentic. Mlkshk shaman pug enamel pin, banh mi tousled vinyl bushwick migas umami vexillologist seitan mixtape celiac godard. Pickled echo park vexillologist retro, cliche bitters viral tacos jianbing. Biodiesel shoreditch skateboard banjo humblebrag.</p>
       <p>Neutra kale chips retro affogato taiyaki beard, normcore before they sold out plaid mumblecore gentrify narwhal YOLO hashtag. Iceland next level before they sold out affogato authentic. Viral dreamcatcher everyday carry migas asymmetrical woke. Neutra fashion axe distillery, typewriter 3 wolf moon humblebrag chillwave shaman vinyl wolf occupy. Retro mixtape pok pok semiotics, pork belly meditation poke. Squid kogi tumblr, semiotics tote bag kitsch hella iPhone godard vice tilde chia. Jean shorts church-key vegan direct trade, ethical readymade tbh hashtag sartorial tumeric banjo 8-bit. Church-key gluten-free godard pinterest heirloom craft beer cred before they sold out mumblecore quinoa authentic. Mlkshk shaman pug enamel pin, banh mi tousled vinyl bushwick migas umami vexillologist seitan mixtape celiac godard. Pickled echo park vexillologist retro, cliche bitters viral tacos jianbing. Biodiesel shoreditch skateboard banjo humblebrag.</p>
       <p>Neutra kale chips retro affogato taiyaki beard, normcore before they sold out plaid mumblecore gentrify narwhal YOLO hashtag. Iceland next level before they sold out affogato authentic. Viral dreamcatcher everyday carry migas asymmetrical woke. Neutra fashion axe distillery, typewriter 3 wolf moon humblebrag chillwave shaman vinyl wolf occupy. Retro mixtape pok pok semiotics, pork belly meditation poke. Squid kogi tumblr, semiotics tote bag kitsch hella iPhone godard vice tilde chia. Jean shorts church-key vegan direct trade, ethical readymade tbh hashtag sartorial tumeric banjo 8-bit. Church-key gluten-free godard pinterest heirloom craft beer cred before they sold out mumblecore quinoa authentic. Mlkshk shaman pug enamel pin, banh mi tousled vinyl bushwick migas umami vexillologist seitan mixtape celiac godard. Pickled echo park vexillologist retro, cliche bitters viral tacos jianbing. Biodiesel shoreditch skateboard banjo humblebrag.</p>
