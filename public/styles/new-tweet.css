@@ -32,6 +32,6 @@
   padding-right: 5px;
 }
 
-.new-tweet .counter.negative {
+.new-tweet .counter.error {
   color: red;
 }
