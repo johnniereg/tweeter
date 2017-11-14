@@ -19,15 +19,37 @@ var tweetData = {
     "text": "If I have seen further it is by standing on the shoulders of giants"
   },
   "created_at": 1461116232227
-}
+};
 
 function createTweetElement(tweetdata) {
+  // Build the header element.
+  let $header = $("<header>").append(`<img class="avatar" src="${tweetdata.user.avatars.small}">`)
+                             .append(`<div class="name">${tweetdata.user.name}</div>`)
+                             .append(`<div class="handle">${tweetdata.user.handle}</div>`);
 
+  // Build the tweet section.
+  let $section = $("<section>Section Test</section>");
+
+  // Build the footer section.
+  let $footer = $("<footer>Footer Test</footer>");
+
+  // Compile header, section, footer into article element.
+  let theTweet = $("<article>").addClass("tweet")
+                             .append($header)
+                             .append($section)
+                             .append($footer);
+
+  return theTweet;
 }
-
 
 
 let $tweet = createTweetElement(tweetData);
 
-// console.log($tweet); // to see what it looks like
-// $('#tweets').append($tweet); // to add to page.
+console.log($tweet); // to see what it looks like
+
+$(document).ready(function() {
+  $('#tweets').append($tweet); // to add to page.
+});
+
+
+
