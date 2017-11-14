@@ -3,13 +3,13 @@ $(document).ready(function() {
   let textField = $(".new-tweet").find("textarea[name='text']");
   // When the text area receives any input.
   $(textField).on("input", function() {
+    console.log("Changed.");
     // Sets total typed characters.
     let totalCharsTyped = $(this).val().length;
     // Sets remaining characters.
     let remainingChars = 140 - totalCharsTyped;
     // Selects the counter in this form.
     let charCounter = $(this).closest(".new-tweet").find(".counter");
-
     // Replaces counter text with remaining counter amount.
     charCounter.text(remainingChars);
     // Adds class of "negative" in order to colour counter red.
