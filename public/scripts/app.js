@@ -21,6 +21,8 @@ var tweetData = {
   "created_at": 1461116232227
 };
 
+
+
 function createTweetElement(tweetdata) {
   // Build the header element.
   let $header = $("<header>")
@@ -33,14 +35,17 @@ function createTweetElement(tweetdata) {
                   .append(`<div class="tweet-body">${tweetdata.content.text}</div>`);
 
   // Build the footer section.
-  let $footer = $("<footer>Footer Test</footer>");
+  let $footer = $("<footer>")
+                  .append(`<div class="tweet-date">${tweetdata.created_at}</div>`)
+                  .append("<i class='fa fa-heart'>")
+                  .append("<i class='fa fa-retweet'>")
+                  .append("<i class='fa fa-flag'>");
 
   // Compile header, section, footer into article element.
   let theTweet = $("<article>").addClass("tweet")
                              .append($header)
                              .append($section)
                              .append($footer);
-
   return theTweet;
 }
 
