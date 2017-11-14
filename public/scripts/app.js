@@ -23,12 +23,14 @@ var tweetData = {
 
 function createTweetElement(tweetdata) {
   // Build the header element.
-  let $header = $("<header>").append(`<img class="avatar" src="${tweetdata.user.avatars.small}">`)
-                             .append(`<div class="name">${tweetdata.user.name}</div>`)
-                             .append(`<div class="handle">${tweetdata.user.handle}</div>`);
+  let $header = $("<header>")
+                  .append(`<img class="avatar" src="${tweetdata.user.avatars.small}">`)
+                  .append(`<div class="name">${tweetdata.user.name}</div>`)
+                  .append(`<div class="handle">${tweetdata.user.handle}</div>`);
 
   // Build the tweet section.
-  let $section = $("<section>Section Test</section>");
+  let $section = $("<section>")
+                  .append(`<div class="tweet-body">${tweetdata.content.text}</div>`);
 
   // Build the footer section.
   let $footer = $("<footer>Footer Test</footer>");
