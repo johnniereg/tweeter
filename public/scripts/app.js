@@ -57,15 +57,24 @@ $(document).ready(function() {
     event.preventDefault();
     // Selects the form input text.
     const tweetText = $(this).find("form").serialize();
-    // Makes a POST request using form data.
-    $.ajax({
-      type: "POST",
-      url: "/tweets/",
-      data: tweetText
-    })
-      .done(function() {
-        console.log("Done.");
-      });
+    console.log(tweetText);
+    console.log(tweetText.length);
+
+    if (tweetText.length <= 5) {
+      $.flash("Tweet can't be empty.");
+    } else if (tweetText.length > 145) {
+      $.flash("Tweet must be 140 characters or less.");
+    } else {
+      // Makes a POST request using form data.
+      $.ajax({
+        type: "POST",
+        url: "/tweets/",
+        data: tweetText
+      })
+        .done(function() {
+          console.log("Done.");
+        });
+    }
   }
 
   // Use AJAX to get tweets and then render them.
