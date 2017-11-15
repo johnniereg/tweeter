@@ -1,3 +1,10 @@
+/*
+**
+** Styling for the compose tweet section.
+**
+*/
+
+/* Compose tweet form, whole element */
 .new-tweet {
   background-color: #eee;
   margin-left: 2em;
@@ -7,6 +14,7 @@
   border-radius: 5px;
 }
 
+/* "Compose Tweet" header. */
 .new-tweet h2 {
   border-bottom: 1px solid black;
   margin-top: 0;
@@ -16,6 +24,7 @@
   overflow: auto;
 }
 
+/* Sets spacing and size for the text input area */
 .new-tweet textarea {
   width: 100%;
   max-width: 100%;
@@ -24,6 +33,7 @@
   padding: 5px;
 }
 
+/* Character counter for tweet composition */
 .new-tweet .counter {
   font-style: italic;
   font-size: small;
@@ -32,6 +42,7 @@
   padding-right: 5px;
 }
 
+/* Adjust color when character count drops below 0 */
 .new-tweet .counter.error {
   color: red;
 }
