@@ -1,3 +1,9 @@
+/*
+**
+** Styling for rendered tweets.
+**
+ */
+
 article.tweet {
   background-color: #eee;
   margin-top: 1em;
@@ -5,7 +11,7 @@ article.tweet {
   margin-left: 2em;
   margin-right: 2em;
   border: 1px solid rgba(255, 0, 0, .5);
-  opacity: 0.9;
+  opacity: 0.8;
   border-radius: 5px;
   overflow: auto;
 }
@@ -13,6 +19,12 @@ article.tweet {
 article.tweet:hover {
   opacity: 1;
 }
+
+/*
+**
+** Styling for header portion of tweets.
+**
+ */
 
 article.tweet header {
   padding: 10px;
@@ -41,11 +53,23 @@ article.tweet .name {
   font-weight: bold;
 }
 
+/*
+**
+** Styling for tweet body text portion of tweets.
+**
+ */
+
 article.tweet .tweet-body {
   clear: both;
   background-color: white;
   padding: 25px 15px;
 }
+
+/*
+**
+** Styling for footer portion of tweets.
+**
+ */
 
 article.tweet footer {
   border-top: 1px solid rgba(255, 0, 0, .5);
@@ -59,14 +83,17 @@ article.tweet .tweet-date {
   float: left;
 }
 
+/* Styling for flag heart retweet icons */
 article.tweet .fa {
   padding: 3px;
   float: right;
-  opacity: 0;
+  opacity: 0; /* makes icons invisible */
 }
 
+/* Shows icons when hover over the whole tweet */
 article.tweet:hover .fa {
   padding: 3px;
   float: right;
-  opacity: 0.75;
+  opacity: 1; /
 }
+
