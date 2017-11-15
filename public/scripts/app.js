@@ -58,9 +58,8 @@ $(document).ready(function() {
     // Stops page from redirecting/reloading.
     event.preventDefault();
     // Selects the form input text.
-    const tweetText = $(this).find("form").serialize();
-    console.log(tweetText);
-    console.log(tweetText.length);
+    const $tweetForm = $(this).find("form");
+    const tweetText = $tweetForm.serialize();
 
     if (tweetText.length <= 5) {
       $.flash("Tweet can't be empty.");
@@ -75,6 +74,7 @@ $(document).ready(function() {
       })
         .done(function() {
           loadTweets();
+          $tweetForm.find("textarea").val("");
         });
     }
   }
