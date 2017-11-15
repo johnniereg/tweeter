@@ -42,20 +42,11 @@
   border-radius: 5px;
   padding: 15px;
   margin-top: 13px;
+  opacity: .8;
 }
 
-/*
-#nav-bar .compose:before {
-  clear: both;
+#nav-bar .compose:hover {
+  opacity: 1;
 }
-
-#nav-bar .compose:after {
-  clear: both;
-}
-/*
-.fa {
-  padding: 5px;
-}
-*/
 
 
