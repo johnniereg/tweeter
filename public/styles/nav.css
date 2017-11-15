@@ -7,8 +7,6 @@
 #nav-bar {
   position: fixed;
   height: 80px;
-  line-height: 80px;
-  text-align: center;
   background-color: #00a087;
   color: #e8fdff
   top: 0;
@@ -18,11 +16,16 @@
   z-index: 1; /* Puts nav-bar above everything else. Default is 0 unless set */
 }
 
+#nav-bar:after {
+  clear: both;
+}
+
 /* Navigation header title: Tweeter. */
 #nav-bar .header {
   float: left;
   font-size: 200%;
   padding-left: 10px;
+  padding-top: 20px;
 }
 
 /* Navigation logo image. */
@@ -31,3 +34,28 @@
   height: 80px;
   float: left;
 }
+
+#nav-bar .compose {
+  float: right;
+  background-color: white;
+  border: 1px solid rgba(255, 0, 0, .5);
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 13px;
+}
+
+/*
+#nav-bar .compose:before {
+  clear: both;
+}
+
+#nav-bar .compose:after {
+  clear: both;
+}
+/*
+.fa {
+  padding: 5px;
+}
+*/
+
+
