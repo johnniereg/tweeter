@@ -22,33 +22,36 @@ var tweetData = {
 };
 
 
-
-function createTweetElement(tweetdata) {
+// Builds the element for a unique tweet to add to HTML.
+function createTweetElement(tweet) {
   // Build the header element.
   let $header = $("<header>")
-                  .append(`<img class="avatar" src="${tweetdata.user.avatars.small}">`)
-                  .append(`<div class="name">${tweetdata.user.name}</div>`)
-                  .append(`<div class="handle">${tweetdata.user.handle}</div>`);
-
+                  .append(`<img class="avatar" src="${tweet.user.avatars.small}">`)
+                  .append(`<div class="name">${tweet.user.name}</div>`)
+                  .append(`<div class="handle">${tweet.user.handle}</div>`);
   // Build the tweet section.
   let $section = $("<section>")
-                  .append(`<div class="tweet-body">${tweetdata.content.text}</div>`);
+                  .append(`<div class="tweet-body">${tweet.content.text}</div>`);
+
+  // Determine how many days ago the tweet was created.
+  let daysAgo = Math.floor((Date.now() - tweet.created_at) / (1000*60*60*24));
 
   // Build the footer section.
   let $footer = $("<footer>")
-                  .append(`<div class="tweet-date">${tweetdata.created_at}</div>`)
+                  .append(`<div class="tweet-date">${daysAgo} days ago</div>`)
                   .append("<i class='fa fa-heart'>")
                   .append("<i class='fa fa-retweet'>")
                   .append("<i class='fa fa-flag'>");
-
   // Compile header, section, footer into article element.
   let theTweet = $("<article>").addClass("tweet")
                              .append($header)
                              .append($section)
                              .append($footer);
+
+
+  console.log(typeof tweet.created_at);
   return theTweet;
 }
-
 
 let $tweet = createTweetElement(tweetData);
 
