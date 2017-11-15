@@ -96,6 +96,9 @@ $(document).ready(function() {
   // Adds event listener for new-tweet submissions.
   $(".new-tweet").on("submit", submitTweet);
 
+  $(".compose").on("click", function() {
+    $(".new-tweet").slideToggle().find("textarea").focus();
+  });
 
 });
 
