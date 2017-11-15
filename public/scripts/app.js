@@ -56,31 +56,32 @@ var data = [
 function createTweetElement(tweet) {
 
   // Build the header element.
-  let $header = $("<header>")
+  const $header = $("<header>")
     .append(`<img class="avatar" src="${tweet.user.avatars.small}">`)
     .append(`<div class="name">${tweet.user.name}</div>`)
     .append(`<div class="handle">${tweet.user.handle}</div>`);
 
   // Build the tweet section.
-  let $section = $("<section>")
+  const $section = $("<section>")
     .append("<div>").text(tweet.content.text).addClass("tweet-body");
 
   // Determine how many days ago the tweet was created.
-  let daysAgo = Math.floor((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
+  const daysAgo = Math.floor((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
 
   // Build the footer section.
-  let $footer = $("<footer>")
+  const $footer = $("<footer>")
     .append(`<div class="tweet-date">${daysAgo} days ago</div>`)
     .append("<i class='fa fa-heart'>")
     .append("<i class='fa fa-retweet'>")
     .append("<i class='fa fa-flag'>");
 
   // Compile header, section, footer into article element.
-  let tweetElement = $("<article class='tweet'>")
+  const $tweetElement = $("<article class='tweet'>")
     .append($header)
     .append($section)
     .append($footer);
-  return tweetElement;
+
+  return $tweetElement;
 }
 
 // Given a database of tweets, render them on the index page.
