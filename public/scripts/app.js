@@ -32,10 +32,8 @@ function createTweetElement(tweet) {
   // Build the tweet section.
   let $section = $("<section>")
                   .append(`<div class="tweet-body">${tweet.content.text}</div>`);
-
   // Determine how many days ago the tweet was created.
   let daysAgo = Math.floor((Date.now() - tweet.created_at) / (1000*60*60*24));
-
   // Build the footer section.
   let $footer = $("<footer>")
                   .append(`<div class="tweet-date">${daysAgo} days ago</div>`)
@@ -47,9 +45,6 @@ function createTweetElement(tweet) {
                              .append($header)
                              .append($section)
                              .append($footer);
-
-
-  console.log(typeof tweet.created_at);
   return theTweet;
 }
 
