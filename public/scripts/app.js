@@ -63,6 +63,7 @@ function createTweetElement(tweet) {
 
   // Build the tweet section.
   const $section = $("<section>")
+    // Using a different method here to protect against cross-site scripting.
     .append("<div>").text(tweet.content.text).addClass("tweet-body");
 
   // Determine how many days ago the tweet was created.
