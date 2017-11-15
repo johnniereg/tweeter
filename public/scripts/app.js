@@ -44,10 +44,12 @@ $(document).ready(function() {
 
   // Given a database of tweets, render them on the index page.
   function renderTweets(tweets) {
+    // Clears out the section before rendering with new tweets.
+    $('#tweets').empty();
     // Loops through tweet and creates element for each one.
     tweets.forEach(function(tweet) {
       // Adds the tweet element to the container.
-      $('#tweets').append(createTweetElement(tweet));
+      $('#tweets').prepend(createTweetElement(tweet));
     });
   }
 
@@ -72,7 +74,7 @@ $(document).ready(function() {
         data: tweetText
       })
         .done(function() {
-          console.log("Done.");
+          loadTweets();
         });
     }
   }
