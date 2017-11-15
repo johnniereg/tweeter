@@ -16,6 +16,7 @@ article.tweet {
   overflow: auto;
 }
 
+/* Shows the hovered tweet more strongly */
 article.tweet:hover {
   opacity: 1;
 }
