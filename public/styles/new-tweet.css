@@ -27,8 +27,8 @@
 /* Sets spacing and size for the text input area */
 .new-tweet textarea {
   width: 100%;
-  max-width: 100%;
-  min-width: 100%;
+  max-width: 100%; /* Prevents stretch outside area */
+  min-width: 100%; /* Prevents shrink smaller than area */
   height: 120%;
   padding: 5px;
 }
