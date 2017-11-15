@@ -68,18 +68,20 @@ function createTweetElement(tweet) {
   // Determine how many days ago the tweet was created.
   const daysAgo = Math.floor((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
 
+  // Constructs icon group for insertion into footer.
+  const flagIcon = "<i class='fa fa-flag'></i>";
+  const retweetIcon = "<i class='fa fa-retweet'></i>";
+  const heartIcon = "<i class='fa fa-heart'></i>";
+  const faviconBlock = flagIcon + retweetIcon + heartIcon;
+
   // Build the footer section.
   const $footer = $("<footer>")
     .append(`<div class="tweet-date">${daysAgo} days ago</div>`)
-    .append("<i class='fa fa-heart'>")
-    .append("<i class='fa fa-retweet'>")
-    .append("<i class='fa fa-flag'>");
+    .append(`<div class='favicons'>${faviconBlock}</div>`);
 
   // Compile header, section, footer into article element.
   const $tweetElement = $("<article class='tweet'>")
-    .append($header)
-    .append($section)
-    .append($footer);
+    .append($header, $section, $footer);
 
   return $tweetElement;
 }
