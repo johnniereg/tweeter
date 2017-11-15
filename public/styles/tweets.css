@@ -4,7 +4,7 @@
 **
  */
 
-article.tweet {
+.tweet {
   background-color: #eee;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -17,7 +17,7 @@ article.tweet {
 }
 
 /* Shows the hovered tweet more strongly */
-article.tweet:hover {
+.tweet:hover {
   opacity: 1;
 }
 
@@ -27,27 +27,27 @@ article.tweet:hover {
 **
  */
 
-article.tweet header {
+.tweet header {
   padding: 10px;
   overflow: auto;
 }
 
-article.tweet header:after {
+.tweet header:after {
   clear: both;
 }
 
-article.tweet .avatar {
+.tweet .avatar {
   border-radius: 5px;
   float: left;
 }
 
-article.tweet .handle {
+.tweet .handle {
   float: right;
   padding-top: 5px;
   font-size: 13px;
 }
 
-article.tweet .name {
+.tweet .name {
   float: left;
   padding-left: 10px;
   font-size: 25px;
@@ -60,7 +60,7 @@ article.tweet .name {
 **
  */
 
-article.tweet .tweet-body {
+.tweet .tweet-body {
   clear: both;
   background-color: white;
   padding: 25px 15px;
@@ -72,7 +72,7 @@ article.tweet .tweet-body {
 **
  */
 
-article.tweet footer {
+.tweet footer {
   border-top: 1px solid rgba(255, 0, 0, .5);
   padding: 10px;
   background-color: white;
@@ -80,21 +80,19 @@ article.tweet footer {
   overflow: auto;
 }
 
-article.tweet .tweet-date {
+.tweet .tweet-date {
   float: left;
 }
 
 /* Styling for flag heart retweet icons */
-article.tweet .fa {
+.tweet .fa {
   padding: 3px;
   float: right;
   opacity: 0; /* makes icons invisible */
 }
 
 /* Shows icons when hover over the whole tweet */
-article.tweet:hover .fa {
-  padding: 3px;
-  float: right;
+.tweet:hover .fa {
   opacity: 1; /
 }
 
