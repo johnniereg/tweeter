@@ -80,19 +80,28 @@
   overflow: auto;
 }
 
+.tweet footer:after {
+  clear: both;
+}
+
 .tweet .tweet-date {
   float: left;
 }
 
 /* Styling for flag heart retweet icons */
-.tweet .fa {
+.tweet .favicons {
   padding: 3px;
   float: right;
-  opacity: 0; /* makes icons invisible */
+  visibility: hidden; /* makes icons invisible */
 }
 
 /* Shows icons when hover over the whole tweet */
-.tweet:hover .fa {
-  opacity: 1; /
+.tweet:hover .favicons {
+  visibility: visible;
+}
+
+.favicons i {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
