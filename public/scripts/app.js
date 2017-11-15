@@ -100,12 +100,22 @@ $(document).ready(function() {
   }
 
 
-  // AJAX compose tweet submissions instead of default behaviour
-
+  // Handle submit tweet behaviour.
   function submitTweet(event) {
     event.preventDefault();
     console.log("Clicked.");
+    const tweetText = $(this).find("form").serialize();
+    console.log(tweetText);
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: tweetText
+    })
+      .done(function() {
+        console.log("Done.");
+      });
   }
+
 
   $(".new-tweet").on("submit", submitTweet);
 
