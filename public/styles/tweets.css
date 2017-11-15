@@ -28,17 +28,17 @@ article.tweet .avatar {
   float: left;
 }
 
+article.tweet .handle {
+  float: right;
+  padding-top: 5px;
+  font-size: 13px;
+}
+
 article.tweet .name {
   float: left;
   padding-left: 10px;
   font-size: 25px;
   font-weight: bold;
-}
-
-article.tweet .handle {
-  float: right;
-  padding-top: 5px;
-  font-size: 13px;
 }
 
 article.tweet .tweet-body {

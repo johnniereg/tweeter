@@ -17,7 +17,7 @@ var data = [
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "<script>alert('uh oh!');</script>"
     },
     "created_at": 1461116232227
   },
@@ -61,7 +61,7 @@ function createTweetElement(tweet) {
                   .append(`<div class="handle">${tweet.user.handle}</div>`);
   // Build the tweet section.
   let $section = $("<section>")
-                  .append(`<div class="tweet-body">${tweet.content.text}</div>`);
+                  .append("<div>").text(tweet.content.text).addClass("tweet-body");
   // Determine how many days ago the tweet was created.
   let daysAgo = Math.floor((Date.now() - tweet.created_at) / (1000*60*60*24));
   // Build the footer section.
