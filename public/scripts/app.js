@@ -100,6 +100,16 @@ $(document).ready(function() {
   }
 
 
+  // AJAX compose tweet submissions instead of default behaviour
+
+  function submitTweet(event) {
+    event.preventDefault();
+    console.log("Clicked.");
+  }
+
+  $(".new-tweet").on("submit", submitTweet);
+
+
   // Render tweets.
   renderTweets(data);
 
