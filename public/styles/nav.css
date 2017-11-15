@@ -35,6 +35,7 @@
   float: left;
 }
 
+/* Navigation bar compose button */
 #nav-bar .compose {
   float: right;
   background-color: white;

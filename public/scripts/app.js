@@ -57,10 +57,12 @@ $(document).ready(function() {
   function submitTweet(event) {
     // Stops page from redirecting/reloading.
     event.preventDefault();
+
     // Selects the form input text.
     const $tweetForm = $(this).find("form");
     const tweetText = $tweetForm.serialize();
 
+    // Sends flash messages if tweet empty or too long.
     if (tweetText.length <= 5) {
       $.flash("Tweet can't be empty.");
     } else if (tweetText.length > 145) {
@@ -72,6 +74,7 @@ $(document).ready(function() {
         url: "/tweets/",
         data: tweetText
       })
+      // Loads tweets and clears the text area after POST.
         .done(function() {
           loadTweets();
           $tweetForm.find("textarea").val("");
@@ -79,7 +82,7 @@ $(document).ready(function() {
     }
   }
 
-  // Use AJAX to get tweets and then render them.
+  // Use AJAX to get all tweets and then render them.
   function loadTweets() {
     $.ajax({
       type: "GET",
@@ -91,11 +94,13 @@ $(document).ready(function() {
     });
   }
 
+  // Loads existing tweets when document is ready.
   loadTweets();
 
   // Adds event listener for new-tweet submissions.
   $(".new-tweet").on("submit", submitTweet);
 
+  // Slide animation and focus to text area for compose button.
   $(".compose").on("click", function() {
     $(".new-tweet").slideToggle().find("textarea").focus();
   });
