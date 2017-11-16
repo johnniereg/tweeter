@@ -78,6 +78,7 @@ $(document).ready(function() {
         .done(function() {
           loadTweets();
           $tweetForm.find("textarea").val("");
+          $tweetForm.find(".counter").text("140");
         });
     }
   }
