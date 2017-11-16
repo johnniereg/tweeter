@@ -10,7 +10,7 @@ $(document).ready(function() {
       .append(`<div class="handle">${tweet.user.handle}</div>`);
 
     // Build the tweet section.
-    const $section = $("<section>")
+    const $main = $("<main>")
       // Using a different method here to protect against cross-site scripting.
       .append("<div>").text(tweet.content.text).addClass("tweet-body");
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     // Compile header, section, footer into article element.
     const $tweetElement = $("<article class='tweet'>")
-      .append($header, $section, $footer);
+      .append($header, $main, $footer);
 
     return $tweetElement;
   }
