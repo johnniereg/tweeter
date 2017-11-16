@@ -1,10 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
 $(document).ready(function() {
 
   // Builds the element for a unique tweet to add to HTML.
@@ -46,7 +39,7 @@ $(document).ready(function() {
   function renderTweets(tweets) {
     // Clears out the section before rendering with new tweets.
     $('#tweets').empty();
-    // Loops through tweet and creates element for each one.
+    // Loops through tweets and creates element for each one.
     tweets.forEach(function(tweet) {
       // Adds the tweet element to the container.
       $('#tweets').prepend(createTweetElement(tweet));
@@ -74,7 +67,7 @@ $(document).ready(function() {
         url: "/tweets/",
         data: tweetText
       })
-      // Loads tweets and clears the text area after POST.
+      // Reloads tweets,clears the text area and resets counter.
         .done(function() {
           loadTweets();
           $tweetForm.find("textarea").val("");
@@ -107,6 +100,3 @@ $(document).ready(function() {
   });
 
 });
-
-
-
