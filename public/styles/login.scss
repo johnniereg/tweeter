@@ -3,43 +3,55 @@
 ** Styling for the compose tweet section.
 **
 */
+.users {
+  display: none;
 
-/* Compose tweet form, whole element */
-.user-action {
-  background-color: $bgColour;
-  margin-left: 2em;
-  margin-right: 2em;
-  border: 1px solid rgba(255, 0, 0, .5);
-  padding: 10px;
-  border-radius: 5px;
-  /* display: none; */
-  margin-bottom: 1em;
-
-  /* "Compose Tweet" header. */
-  h2 {
-    border-bottom: 1px solid black;
-    margin-top: 0;
-    margin-bottom: 5px;
+  /* Compose tweet form, whole element */
+  .register {
+    display: none;
   }
+  .login, .register {
+    background-color: $bgColour;
+    margin-left: 2em;
+    margin-right: 2em;
+    border: 1px solid rgba(255, 0, 0, .5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1em;
 
-  form {
-    overflow: auto;
-    width: 100%;
-    padding: 0px;
-  }
-
-  /* Sets spacing and size for the text input area */
-  input {
-    width: 100%;
-
-    &[type=submit] {
-      margin-top: 8px;
+    /* "Compose Tweet" header. */
+    h2 {
+      border-bottom: 1px solid black;
+      margin-top: 0;
+      margin-bottom: 5px;
     }
 
-  }
+    form {
+      overflow: auto;
+      width: 100%;
+      padding: 0px;
+    }
 
-  label {
-    font-size: small;
-  }
+    /* Sets spacing and size for the text input area */
+    input {
+      width: 100%;
 
+      &[type=submit] {
+        margin-top: 8px;
+      }
+
+    }
+
+    label {
+      font-size: small;
+    }
+
+    h5 {
+      margin: 10px 0px 5px 5px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }

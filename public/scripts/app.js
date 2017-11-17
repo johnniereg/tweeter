@@ -101,11 +101,21 @@ $(document).ready(function() {
 
   });
 
-  $(".login").on("click", function() {
-    $(window).scrollTop(0)
-    $(".user-action").slideToggle().find("textarea").focus();
+  // Slide animations for login/register button
+  $(".user-action").on("click", function() {
+    $(window).scrollTop(0);
+    $(".users").slideToggle();
   });
 
+  $(".register-new").on("click", function() {
+    $(".register").show();
+    $(".login").hide();
+  });
+
+  $(".login-now").on("click", function() {
+    $(".login").show();
+    $(".register").hide();
+  });
 
 
 });

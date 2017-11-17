@@ -30,12 +30,15 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <span class="login">Login/Register</span>
+      <span class="user-action">Login/Register</span>
       <span class="compose"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Compose</span>
     </nav>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="user-action">
+
+      <!-- User Actions form -->
+      <section class="users">
+        <section class="login">
         <h2>Login</h2>
         <form action="" method="">
           <label for="login">Username:</label>
@@ -44,7 +47,29 @@
           <input type="password" name="password">
           <input type="submit" value="Submit">
         </form>
+        <h5 class="register-new">Register new account</h5>
+        </section>
+        <section class="register">
+          <h2>Register</h2>
+          <form action="" method="">
+            <label for="register">First Name:</label>
+            <input type="text" name="firstname">
+            <label for="register">Last Name:</label>
+            <input type="text" name="lastname">
+            <label for="register">Email</label>
+            <input type="email" name="email">
+            <label for="register">Username:</label>
+            <input type="text" name="username">
+            <label for="register">Password:</label>
+            <input type="password" name="password">
+            <input type="submit" value="Submit">
+          </form>
+          <h5 class="login-now">Login to your account</h5>
+        </section>
       </section>
+
+      <!-- Register form -->
+
       <!-- Compose tweet form -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
