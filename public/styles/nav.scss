@@ -6,6 +6,9 @@
 
 #nav-bar {
   position: fixed;
+  display: flex;
+  justify-content: space-around;
+
   height: 80px;
   background-color: #00a087;
   color: #e8fdff;
@@ -15,34 +18,29 @@
   padding: 0 2em;
   z-index: 1; /* Puts nav-bar above everything else. Default is 0 unless set */
 
-  &:after {
-    clear: both;
-  }
-
   /* Navigation header title: Tweeter. */
   .header {
-    float: left;
     font-size: 200%;
+    align-self: center;
     padding-left: 10px;
-    padding-top: 20px;
   }
 
   /* Navigation logo image. */
   .logo {
     width: 80px;
     height: 80px;
-    float: left;
   }
 
   /* Navigation bar compose button */
   .compose {
-    float: right;
+    align-self: center;
+    margin-left: auto;
     background-color: white;
     border: 1px solid rgba(255, 0, 0, .5);
     border-radius: 5px;
     padding: 15px;
-    margin-top: 13px;
     opacity: .9;
+    color: black;
   }
 
   .compose:hover {
