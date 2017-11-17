@@ -50,5 +50,10 @@
     padding-right: 2px;
   }
 
+}
 
+@media (max-width: 375px) {
+  #nav-bar {
+    padding: 5px;
+  }
 }

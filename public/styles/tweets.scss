@@ -18,6 +18,10 @@
   /* Shows the hovered tweet more strongly */
   &:hover {
     opacity: 1;
+
+     .favicons {
+    visibility: visible;
+    }
   }
 
   /*
@@ -96,14 +100,9 @@
   */
 
   .favicons {
-    padding: 3px;
+    padding: 2px;
     float: right;
     visibility: hidden; /* makes icons invisible */
-  }
-
-  /* Shows icons when hover over the whole tweet */
-  .tweet:hover .favicons {
-    visibility: visible;
   }
 
   /* Indiviual icon spacing */
