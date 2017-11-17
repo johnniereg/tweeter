@@ -1,8 +1,8 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page AJAX-based Twitter clone.
+Tweeter is a simple, single-page, responsive AJAX-based Twitter clone.
 
-The app uses jQuery, HTML5, CSS and MongoDB. Flash messages handled with [jQuery Flash Plugin v1.0](http://codaset.com/codaset/jquery-flash).
+The app uses jQuery, HTML5, CSS/SASS and MongoDB. Flash messages handled with [jQuery Flash Plugin v1.0](http://codaset.com/codaset/jquery-flash).
 
 ## Screenshots
 
@@ -26,4 +26,5 @@ The app uses jQuery, HTML5, CSS and MongoDB. Flash messages handled with [jQuery
 - nodemon
 - md5
 - mongodb
+- node-sass-middleware
 
