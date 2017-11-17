@@ -96,7 +96,16 @@ $(document).ready(function() {
 
   // Slide animation and focus to text area for compose button.
   $(".compose").on("click", function() {
+    $(window).scrollTop(0);
     $(".new-tweet").slideToggle().find("textarea").focus();
+
   });
+
+  $(".login").on("click", function() {
+    $(window).scrollTop(0)
+    $(".user-action").slideToggle().find("textarea").focus();
+  });
+
+
 
 });
