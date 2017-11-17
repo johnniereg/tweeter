@@ -1,0 +1,115 @@
+/*
+**
+** Styling for rendered tweets.
+**
+ */
+
+.tweet {
+  background-color: #eee;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  border: 1px solid rgba(255, 0, 0, .5);
+  opacity: 0.8;
+  border-radius: 5px;
+  overflow: auto;
+
+  /* Shows the hovered tweet more strongly */
+  &:hover {
+    opacity: 1;
+  }
+
+  /*
+  **
+  ** Styling for header portion of tweets.
+  **
+   */
+
+  header {
+    padding: 10px;
+    overflow: auto;
+
+    &:after {
+      clear: both;
+    }
+  }
+
+
+  .avatar {
+    border-radius: 5px;
+    float: left;
+  }
+
+  .handle {
+    float: right;
+    padding-top: 5px;
+    font-size: 13px;
+  }
+
+  .name {
+    float: left;
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /*
+  **
+  ** Styling for tweet body text portion of tweets.
+  **
+   */
+
+  .tweet-body {
+    clear: both;
+    background-color: white;
+    padding: 25px 15px;
+  }
+
+  /*
+  **
+  ** Styling for footer portion of tweets.
+  **
+   */
+
+  footer {
+    border-top: 1px solid rgba(255, 0, 0, .5);
+    padding: 10px;
+    background-color: white;
+    font-size: 11px;
+    overflow: auto;
+
+    &:after {
+      clear: both;
+    }
+  }
+
+
+  .tweet-date {
+    float: left;
+  }
+
+  /*
+  **
+  **Styling for flag heart retweet favicon icons
+  **
+  */
+
+  .favicons {
+    padding: 3px;
+    float: right;
+    visibility: hidden; /* makes icons invisible */
+  }
+
+  /* Shows icons when hover over the whole tweet */
+  .tweet:hover .favicons {
+    visibility: visible;
+  }
+
+  /* Indiviual icon spacing */
+  .favicons i {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+}
