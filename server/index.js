@@ -38,9 +38,26 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // Defines routes that are used to interact with the data layer.
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
+
+  // Need to build routes for
+  //
+  // post to /login
+  // delete to /login
+  // post to /register
+
+  app.post("/register", (req, res) => {
+    console.log("Register attempted");
+    res.send("Register route not finished.");
+  });
+
   app.post("/login", (req, res) => {
-    console.log("We get here?");
-    res.send("Did this work?");
+    console.log("Login attempted.");
+    res.send("Login route not finished.");
+  });
+
+  app.delete("/login", (req, res) => {
+    console.log("Logout attempted.");
+    res.send("Logout route not finished.");
   });
 
   // Mount the tweets routes at the "/tweets" path prefix:
