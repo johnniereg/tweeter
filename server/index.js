@@ -38,6 +38,11 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // Defines routes that are used to interact with the data layer.
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
+  app.post("/login", (req, res) => {
+    console.log("We get here?");
+    res.send("Did this work?");
+  });
+
   // Mount the tweets routes at the "/tweets" path prefix:
   app.use("/tweets", tweetsRoutes);
 
